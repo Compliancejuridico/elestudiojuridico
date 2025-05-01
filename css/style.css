@@ -121,6 +121,7 @@ body {
   margin-bottom: 20px;
   align-self: flex-start;
 }
+
 @media (max-width: 768px) {
   body {
     flex-direction: column;
