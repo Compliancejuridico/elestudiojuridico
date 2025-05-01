@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Estudio Jurídico - Inicio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        .left-column, .right-column {
+            width: 50%;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .left-column {
+            background-color: #f1e9db;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-column {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo, .esg-img {
+            max-width: 80%;
+            height: auto;
+        }
+        .contact-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-info img {
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .button {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #2f3d4c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-column">
+        <img src="imagenes/logo.png" alt="Logo" class="logo">
+        <div class="contact-info">
+        <p><img src="imagenes/whatsapp.png" alt="WhatsApp"> 299 438 5520</p>
+        <p><img src="imagenes/email.png" alt="Email"> elestudiojuridico@gmail.com</p>
+        <p><img src="imagenes/instagram.png" alt="Instagram"> @elestudiojuridico</p>
+</div>
+       </div>
+    <div class="right-column">
+        <img src="imagenes/esg.png" alt="ESG" class="esg-img">
+        <button class="button" onclick="window.location.href='menu.html'">INGRESAR</button>
+    </div>
+</body>
+</html>

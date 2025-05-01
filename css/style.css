@@ -1,0 +1,123 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Columna izquierda */
+.left-column {
+  width: 50%;
+  background-color: #f1ede5;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.return-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1f2d3d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.return-button:hover {
+  background-color: #3e4a5a;
+}
+
+/* Columna derecha */
+.right-column {
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Menú de botones */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.menu button {
+  padding: 15px;
+  font-size: 18px;
+  text-align: left;
+  background-color: #d8cfc3;
+  border: 1px solid #b5a99b;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+}
+
+.menu button:hover {
+  background-color: #cfc3b4;
+}
+
+/* Sección de contenido */
+.section-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.content-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#volverBtn {
+  display: none;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - El Estudio Jurídico</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- COLUMNA IZQUIERDA: LOGO + DATOS -->
+    <div class="left-column">
+      <img src="imagenes/logo.png" alt="Logo del Estudio" class="logo">
+      <div class="contact-info">
+        <p><img src="imagenes/whatsapp.png" alt="WhatsApp"> 299 438 5520</p>
+        <p><img src="imagenes/email.png" alt="Email"> elestudiojuridico@gmail.com</p>
+        <p><img src="imagenes/instagram.png" alt="Instagram"> @elestudiojuridico</p>
+        <button class="return-button" onclick="location.href='index.html'">&#8592; Regresar</button>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: MENÚ Y SECCIONES -->
+    <div class="right-column">
+
+      <!-- BOTONES DE SECCIONES -->
+      <div class="menu" id="menu-buttons">
+        <button onclick="showSection('servicios')">Servicios</button>
+        <button onclick="showSection('capacitaciones')">Capacitaciones</button>
+        <button onclick="showSection('beneficios')">Beneficios</button>
+        <button onclick="showSection('equipo')">El equipo</button>
+        <button onclick="showSection('valores')">Valores</button>
+      </div>
+
+      <!-- CONTENIDO DE LAS SECCIONES -->
+      <div class="section-content">
+        <button id="volverBtn" class="return-button" onclick="goBackToMenu()" style="display: none;">&#8592; Volver al menú</button>
+
+        <div class="content-section" id="servicios">
+          <h2>Servicios</h2>
+          <p>Asesoramiento general y técnico para desarrollar un programa de Integridad.<br>
+          1. Redactar un código de ética (política y procedimientos de integridad).<br>
+          2. Examinar las exigencias reglamentarias.<br>
+          3. Determinar la aserción al riesgo y el compromiso.<br>
+          4. Determinación de tareas y cumplimiento.<br>
+          5. Diseño de políticas y adaptación a políticas internas.<br>
+          6. Análisis de riesgo.<br>
+          7. Privacidad de datos.<br>
+          8. Debida diligencia hacia y de terceros (incluye contratos).<br>
+          9. Creación de canal de denuncia (procesos).<br>
+          10. Denuncias.<br>
+          11. Monitoreo y evaluación continua.<br>
+          12. Capacitación.<br>
+          13. Conforme la dimensión, determinar un OC.</p>
+        </div>
+
+        <div class="content-section" id="capacitaciones">
+          <h2>Capacitaciones</h2>
+          <p>Capacitación a CD, Gerencia, mandos medios y operativos en materia de Compliance, con el principal objetivo de generar Cultura, tales como:<br>
+          - Talleres internos y externos (seguimiento de casos reales).<br>
+          - Análisis de riesgos.<br>
+          - Debida diligencia.<br>
+          - Política Antisoborno.<br>
+          - Ética.<br>
+          - Política de regalos.<br>
+          - Privacidad de datos.<br>
+          - Diversidad y género.</p>
+        </div>
+
+        <div id="beneficios" class="content-section">
+  <h2>BENEFICIOS</h2>
+
+  <p><strong>Identificar y mitigar los riesgos de cumplimiento:</strong><br>
+  Uno de los primeros pasos para elaborar un plan o programa de compliance, es hacer un mapa o mapas de riesgos de cumplimiento a los que la empresa puede estar expuesta, en función de aquellas leyes y normas que le afectan por su contexto (localización, tamaño, número de trabajadores, actividad, etc.).<br>
+  Identificar estos riesgos permite a la empresa conocer cuáles son los más críticos por su nivel de probabilidad e impacto y a determinar qué controles y medidas implementar para reducir dicha probabilidad de materialización e impacto negativo en la empresa, así como destinar los recursos necesarios para ello.<br>
+  Conocer estos riesgos de cumplimiento repercute en toda la empresa y sus miembros, puesto que aquello de lo que se es consciente, puede evitarse, al contrario de lo que se desconoce.</p>
+
+  <p><strong>Ahorro de Costos:</strong><br>
+  Al no incurrir en infracciones o delitos penales, gracias al sistema de gestión de compliance, la empresa se ahorrará los costos derivados de las multas correspondientes, así como otras consecuencias que pueden afectar a sus beneficios, como la pérdida de clientes, la pérdida de contratos o, en su caso, de socios e inversores.</p>
+
+  <p><strong>Evita sanciones:</strong><br>
+  Si todos los miembros de la empresa conocen las obligaciones legales que deben cumplir en el desarrollo de sus actividades, será más fácil que no incurran en irregularidades que supongan alguna infracción normativa (como puede ser la protección de datos, la normativa de igualdad, la laboral o la fiscal), evitando así la imposición de sanciones administrativas.</p>
+
+  <p><strong>Ayuda a mejorar procesos:</strong><br>
+  Gracias a sus controles, un sistema de gestión de compliance ayuda a detectar el fraude interno y a tener una mejor organización y control de los procesos de la empresa, lo que repercute positivamente en su competitividad.</p>
+
+  <p><strong>Ventaja competitiva:</strong><br>
+  Contar con un plan o programa de compliance también supone una ventaja competitiva para la empresa. Por un lado, de cara a subcontratar con grandes empresas nacionales e internacionales, tener un plan de compliance puede ser un requisito imprescindible.<br>
+  Por otro lado, contar, al menos, con un plan de prevención de delitos penales, es un requisito para contratar con el sector público, por lo que si estás pensando en presentarte a licitaciones públicas, un completo programa de compliance te dará la oportunidad de competir a otro nivel.</p>
+
+  <p><strong>Genera confianza entre clientes y socios:</strong><br>
+  Una empresa que cumple con sus obligaciones legales, que está comprometida con la ética y el cumplimiento de las leyes, es una empresa en la que sus clientes y socios estratégicos (ej. Proveedores) confían. El compliance ayuda a generar esa confianza y, por tanto, no solo a mantenerlos, sino a atraer nuevos.</p>
+
+  <p><strong>Promover una cultura ética y de cumplimiento normativo:</strong><br>
+  Para que un programa de compliance sea efectivo y eficaz, exige el compromiso real de la dirección de la empresa, que es la primera que debe dar ejemplo de cumplimiento normativo. Así mismo, se debe informar y formar a los empleados en el propio programa de compliance y lo que entraña para el desarrollo de sus tareas y su comportamiento en la empresa, promoviendo así una auténtica cultura ética y del cumplimiento normativo.</p>
+
+  <p><strong>Mejora la imagen y reputación de la empresa:</strong><br>
+  Finalmente, contar con un plan o programa de compliance mejora la imagen y reputación de la empresa, puesto que, pone de manifiesto el compromiso de la dirección y los empleados con la legalidad y con el cumplimiento de las leyes que afectan a la empresa.<br>
+  Una mejor imagen y reputación no solo atraen y mantienen a los clientes, también amplía la capacidad de la empresa para contratar o subcontratar con otras empresas y con el sector público, además de atraer y retener el talento, especialmente de aquellos profesionales comprometidos con la ética y la responsabilidad legal de las empresas.</p>
+</div>
+
+          <div class="content-section" id="equipo">
+          <h2>El equipo</h2>
+          <p><strong>Dr. Leonardo Gisfman</strong><br>
+          Matrículas: Neuquén 3861 / Río Negro 5914 / Federal T145 – F16.<br>
+          Abogado – Certificado en Compliance por la UCA – Diplomado en delitos económicos complejos, responsabilidad penal de la PJ por la UNSAM.<br><br>
+          <strong>Dr. Raúl Frechilla</strong><br>
+          Matrículas: Neuquén 379 / Río Negro / Federal<br>
+          Abogado, experto en derecho Laboral y Civil.<br><br>
+          Somos un equipo que combina la experiencia práctica con la rigurosidad técnica, para generar verdadero valor agregado, cuantificable y medible, como respuesta a los nuevos escenarios que el crecimiento demanda.</p>
+        </div>
+
+        <div class="content-section" id="valores">
+          <h2>Valores</h2>
+          <p>
+            <strong>Ética profesional:</strong> Actuamos con integridad, transparencia y responsabilidad. Nos regimos por principios éticos sólidos.<br>
+            <strong>Compromiso:</strong> Escuchamos y respondemos con dedicación total a las necesidades reales de nuestros clientes.<br>
+            <strong>Prevención y legalidad:</strong> Priorizamos la cultura de cumplimiento y el respeto a las normas.<br>
+            <strong>Confidencialidad y confianza:</strong> Resguardamos toda la información con el máximo nivel de reserva.<br>
+            <strong>Sostenibilidad jurídica:</strong> Apostamos a construir un marco legal sólido, que contribuya al crecimiento sustentable.<br>
+            <strong>Innovación técnica y humanismo:</strong> Combinamos herramientas jurídicas y tecnológicas con una mirada empática y cercana.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
