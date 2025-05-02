@@ -122,39 +122,53 @@ body {
   align-self: flex-start;
 }
 
+/* ----------------------------
+   Responsive para móviles
+---------------------------- */
 @media (max-width: 768px) {
-  body {
+  /* El contenedor principal pasa a columna */
+  .container {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .left-column, .right-column {
-    width: 90%;
-    height: auto;
+  /* Columnas ocupan 100% y se separan */
+  .left-column,
+  .right-column {
+    width: 100%;
     margin: 10px 0;
+    padding: 20px;
   }
 
-  #menu-buttons {
+  /* Menú en columna y botones al 100% */
+  .menu {
     flex-direction: column;
-    align-items: stretch;
     gap: 10px;
   }
-
-  #menu-buttons button {
+  .menu button {
     width: 100%;
+    font-size: 16px;
+    padding: 12px;
   }
 
+  /* Área de contenido ocupa todo el ancho */
+  .section-content {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Ajusta todas las imágenes al 80% del contenedor */
+  .logo,
+  .esg-image,
+  img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Centra el botón de volver */
   #volverBtn {
     margin-top: 20px;
-  }
-
-  .content-section {
-    width: 100%;
-    padding: 10px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
+    align-self: center;
   }
 }
