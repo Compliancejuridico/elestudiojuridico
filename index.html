@@ -29,7 +29,7 @@
       background-color: #ffffff;
     }
     .logo, .esg-image {
-      width: 500px;
+      width: 550px;
       height: auto;
       margin-bottom: 20px;
     }
@@ -65,45 +65,39 @@
       left: 50%;
       transform: translateX(-50%);
     }
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .left-column, .right-column {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .logo, .esg-image {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-  }
-
-  .contact-item {
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-
-  .btn-ingresar {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
-
-  .bottom-center {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-  }
-}
-
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+      .left-column, .right-column {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+      }
+      .logo, .esg-image {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+      }
+      .contact-item {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+      .btn-ingresar {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+      .bottom-center {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -113,16 +107,22 @@
 
       <div class="contact">
         <div class="contact-item">
-          <img src="imagenes/email.png" alt="Email" class="contact-icon" />
-          elestudiojuridico@gmail.com
+          <a href="mailto:leogisfman@gmail.com">
+            <img src="imagenes/email.png" alt="Email" class="contact-icon" />
+          </a>
+          <a href="mailto:leogisfman@gmail.com">elestudiojuridico@gmail.com</a>
         </div>
         <div class="contact-item">
-          <img src="imagenes/whatsapp.png" alt="WhatsApp" class="contact-icon" />
-          +54 299 123 4567
+          <a href="https://wa.me/542994386520" target="_blank">
+            <img src="imagenes/whatsapp.png" alt="WhatsApp" class="contact-icon" />
+          </a>
+          <a href="https://wa.me/542994386520" target="_blank">+54 299 438 6520</a>
         </div>
         <div class="contact-item">
-          <img src="imagenes/instagram.png" alt="Instagram" class="contact-icon" />
-          @elestudiojuridico
+          <a href="https://instagram.com/elestudiojuridico" target="_blank">
+            <img src="imagenes/instagram.png" alt="Instagram" class="contact-icon" />
+          </a>
+          <a href="https://instagram.com/elestudiojuridico" target="_blank">@elestudiojuridico</a>
         </div>
       </div>
     </div>
