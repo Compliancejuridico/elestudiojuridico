@@ -1,16 +1,23 @@
-/* === style.css — VERSIÓN LIMPIA Y CONTROLADA === */
+/* ===========================
+   CSS REPARADOR - versión estable
+   =========================== */
 
-/* General */
+/* Reset y tipografía */
+* { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
+  color: #111;
 }
 
-/* Contenedor principal */
+/* Contenedor principal: dos columnas equilibradas */
 .container {
   display: flex;
-  height: 100vh;
+  flex-direction: row;
+  align-items: flex-start; /* importante: arriba, no centrado vertical */
+  gap: 0;
+  min-height: 100vh;
 }
 
 /* Columna izquierda */
@@ -18,57 +25,68 @@ body {
   width: 50%;
   background-color: #f1ede5;
   padding: 30px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start; /* logos alineados al borde izquierdo */
+  justify-content: flex-start; /* arriba */
+  overflow: hidden;
 }
 
-/* ---- Imagenes en la columna izquierda ----
-   Control independiente para el logo del estudio y para la imagen ESG.
-   Cambiá los valores width en px abajo para ajustar individualmente.
-*/
-.logo, .logo-estudio, #logo-estudio {
-  /* Valor por defecto para el logo del estudio (ajustable) */
-  width: 120px;      /* <-- Cambiá este valor (px) para ajustar sólo el logo */
+/* Columna derecha */
+.right-column {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: #eef3f5;
+  overflow: auto;
+}
+
+/* ---- IMÁGENES: control independiente y seguro ---- */
+/* Logo del estudio (solo este quiero controlar) */
+.left-column img.logo,
+.left-column img.logo-estudio,
+.logo {
+  width: 120px;       /* <- AJUSTÁ este valor para el logo (px) */
   height: auto;
   max-width: 100%;
   display: block;
-  margin-bottom: 30px;
+  margin: 0 0 20px 0;
 }
 
-.esg-image, .logo-esg, #logo-esg {
-  /* Valor por defecto para la imagen ESG (ajustable) */
-  width: 320px;      /* <-- Cambiá este valor (px) para ajustar sólo la ESG */
+/* Imagen ESG (solo esta) */
+.left-column img.logo-esg,
+.left-column img.esg-image,
+.logo-esg,
+.esg-image {
+  width: 360px;       /* <- AJUSTÁ este valor para la ESG (px) */
+  max-width: calc(100% - 20px);
   height: auto;
-  max-width: 100%;
   display: block;
-  margin-bottom: 30px;
+  margin: 0 0 20px 0;
+  align-self: center; /* centra horizontalmente dentro de la columna */
 }
 
 /* Contacto */
 .contact-info {
-  text-align: center;
+  width: 100%;
+  margin-top: 6px;
   font-size: 16px;
-  margin-top: 20px;
+  line-height: 1.6;
 }
-
 .contact-info p {
-  margin: 12px 0;
+  margin: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
 }
-
-.contact-info img {
-  width: 20px;
-  margin-right: 10px;
-}
+.contact-info img { width: 20px; }
 
 /* Botón regresar */
 .return-button {
-  margin-top: 30px;
+  margin-top: 18px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #1f2d3d;
@@ -78,119 +96,53 @@ body {
   cursor: pointer;
 }
 
-.return-button:hover {
-  background-color: #3e4a5a;
-}
-
-/* Columna derecha */
-.right-column {
-  width: 50%;
-  padding: 40px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-
-/* Menú de botones */
+/* Menú de botones (derecha) */
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
-
 .menu button {
-  padding: 15px;
-  font-size: 18px;
+  padding: 12px 14px;
+  font-size: 16px;
   text-align: left;
   background-color: #d8cfc3;
   border: 1px solid #b5a99b;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  color: black;
+  color: #000;
 }
 
-.menu button:hover {
-  background-color: #cfc3b4;
-}
-
-/* Sección de contenido */
+/* Contenido de secciones */
 .section-content {
   flex-grow: 1;
   overflow-y: auto;
+  background: #fff;
+  padding: 16px;
+  border-left: 4px solid #b5a99b;
 }
+.content-section { display: none; }
+.content-section h2 { font-size: 20px; margin-bottom: 10px; }
+.content-section p { font-size: 15px; line-height: 1.5; }
 
-.content-section {
-  display: none;
-}
-
-.content-section h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.content-section p {
+/* Botón Contactar (final) */
+.contactar-container { margin-top: 12px; display:flex; justify-content:center; }
+.contactar-btn {
+  background: #25D366;
+  color: #fff;
+  padding: 12px 26px;
   font-size: 16px;
-  line-height: 1.6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-#volverBtn {
-  display: none;
-  margin-bottom: 20px;
-  align-self: flex-start;
+/* Responsive: apila todo en móvil */
+@media (max-width: 900px) {
+  .container { flex-direction: column; min-height: auto; }
+  .left-column, .right-column { width: 100%; padding: 20px; }
+  .left-column img.logo, .logo { width: 90px; }
+  .left-column img.logo-esg, .logo-esg { width: 180px; }
+  .menu button { font-size: 15px; padding: 10px; }
 }
-
-/* ----------------------------
-   Responsive para móviles
----------------------------- */
-@media (max-width: 768px) {
-  /* El contenedor principal pasa a columna */
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  /* Columnas ocupan 100% y se separan */
-  .left-column,
-  .right-column {
-    width: 100%;
-    margin: 10px 0;
-    padding: 20px;
-  }
-
-  /* Menú en columna y botones al 100% */
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .menu button {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px;
-  }
-
-  /* Área de contenido ocupa todo el ancho */
-  .section-content {
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  /* Ajusta las imágenes proporcionalmente en móvil */
-  .logo, .logo-estudio, #logo-estudio {
-    width: 90px;
-  }
-  .esg-image, .logo-esg, #logo-esg {
-    width: 180px;
-  }
-
-  /* Centra el botón de volver */
-  #volverBtn {
-    margin-top: 20px;
-    align-self: center;
-  }
-}
-
