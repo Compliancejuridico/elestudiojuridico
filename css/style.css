@@ -24,7 +24,7 @@ body {
 }
 
 .logo {
-  width: 100%;
+  width: 80%;
   max-width: 300px;
   margin-bottom: 30px;
 }
@@ -172,4 +172,5 @@ body {
     align-self: center;
   }
 }
+
 
