@@ -1,3 +1,5 @@
+/* === style.css — VERSIÓN LIMPIA Y CONTROLADA === */
+
 /* General */
 body {
   margin: 0;
@@ -23,12 +25,29 @@ body {
   justify-content: center;
 }
 
-.logo {
-  width: 80%;
-  max-width: 80px;
+/* ---- Imagenes en la columna izquierda ----
+   Control independiente para el logo del estudio y para la imagen ESG.
+   Cambiá los valores width en px abajo para ajustar individualmente.
+*/
+.logo, .logo-estudio, #logo-estudio {
+  /* Valor por defecto para el logo del estudio (ajustable) */
+  width: 120px;      /* <-- Cambiá este valor (px) para ajustar sólo el logo */
+  height: auto;
+  max-width: 100%;
+  display: block;
   margin-bottom: 30px;
 }
 
+.esg-image, .logo-esg, #logo-esg {
+  /* Valor por defecto para la imagen ESG (ajustable) */
+  width: 320px;      /* <-- Cambiá este valor (px) para ajustar sólo la ESG */
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* Contacto */
 .contact-info {
   text-align: center;
   font-size: 16px;
@@ -47,6 +66,7 @@ body {
   margin-right: 10px;
 }
 
+/* Botón regresar */
 .return-button {
   margin-top: 30px;
   padding: 10px 20px;
@@ -131,6 +151,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
   }
 
   /* Columnas ocupan 100% y se separan */
@@ -158,53 +179,18 @@ body {
     padding: 10px 0;
   }
 
+  /* Ajusta las imágenes proporcionalmente en móvil */
+  .logo, .logo-estudio, #logo-estudio {
+    width: 90px;
+  }
+  .esg-image, .logo-esg, #logo-esg {
+    width: 180px;
+  }
+
   /* Centra el botón de volver */
   #volverBtn {
     margin-top: 20px;
     align-self: center;
   }
-
-/* === Reglas específicas para logo y ESG (pegar al final del CSS) === */
-
-/* Logo del estudio — tamaño fijo de escritorio, escala en móvil */
-.logo-estudio,
-#logo-estudio {
-  width: 120px;        /* <-- ajustá este valor a tu gusto (px) */
-  height: auto;
-  max-width: none;
-  display: block;
 }
-
-/* Logo ESG — tamaño mayor, relativo al contenedor */
-.logo-esg,
-#logo-esg,
-.esg-image {
-  width: 500px;        /* <-- tamaño ESG en escritorio */
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Si existía una regla global que afectaba a "img", asegúrate de neutralizarla para estas dos */
-.left-column img.logo-estudio,
-.left-column img.logo-esg {
-  /* prioridad local; mantiene el comportamiento dentro del panel izquierdo */
-}
-
-/* Responsive: reducir en móviles */
-@media (max-width: 768px) {
-  .logo-estudio,
-  #logo-estudio {
-    width: 90px;
-  }
-  .logo-esg,
-  #logo-esg,
-  .esg-image {
-    width: 180px;
-  }
-}
-
-
-
-
 
