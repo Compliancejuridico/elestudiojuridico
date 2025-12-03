@@ -179,7 +179,7 @@ body {
 .logo-esg,
 #logo-esg,
 .esg-image {
-  width: 320px;        /* <-- tamaño ESG en escritorio */
+  width: 500px;        /* <-- tamaño ESG en escritorio */
   max-width: 100%;
   height: auto;
   display: block;
@@ -203,6 +203,7 @@ body {
     width: 180px;
   }
 }
+
 
 
 
